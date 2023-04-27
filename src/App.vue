@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!-- this should keep all of the basic building blocks-->
+<!-- the components and their props -->
+  <div>
+    <h1>{{firstName}} {{lastName}}</h1>
+    <h3>Email: {{email}}</h3>
+    <button>Get Random User</button>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+// this should be where the components are named in a component object
+// and where they are all individually imported
+// this is also the place for methods, created, etc.
+    data(){
+      return {
+        firstName: 'John',
+        lastName: 'Smith',
+        email: 'john@gmail.com',
+        gender: 'male', 
+        picture: 'https://randomuser.me/api/portraits/men/10.jpeg'
+      }
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
+
 </style>
